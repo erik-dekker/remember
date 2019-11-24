@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Authentication
 gem 'devise'
 
+# Easy bootstrap forms with rails form helpers
+gem "bootstrap_form", "~> 4.0"
