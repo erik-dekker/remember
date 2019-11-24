@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <%= bootstrap_form_with(model: @albums, scope: :album, url: albums_path) do |f| %>
+    <%= f.text_field :title, label: "Give your new album a name" %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>
+
+
