@@ -4,10 +4,15 @@
       <h1 class="jumbotron-heading"><%= @album.title%></h1>
       <p class="lead text-muted"><%= @album.description %></p>
       <div class="btn-group">
-        <%= button_to 'Upload photos', new_album_photo_path(@album.id), method: :put, class: 'btn btn-primary my-2 mx-1' %>
+        <%= button_to 'Upload photos', new_album_photo_path(@album.id), method: :get, class: 'btn btn-primary my-2 mx-1' %>
         <%= button_to 'Delete album', album_path, method: :delete, class: 'btn btn-danger my-2 mx-1' %>
       </div>
     </div>
   </section>
 
-  <!-- Photo placeholder -->
+
+  <ul>
+    <% @album.photos.each do |photo| %>
+    <li><%= photo.created_at %><br><img src="<%= photo.img_data %>"></li>
+    <% end %>
+  </ul>
