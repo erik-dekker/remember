@@ -9,10 +9,8 @@
       </div>
     </div>
   </section>
-
-
-  <ul>
+  <section id="photos">
     <% @album.photos.each do |photo| %>
-    <li><%= photo.created_at %><br><img src="<%= photo.img_data %>"></li>
+    <%= photo.description %><%= image_tag(photo.img_data) if photo.img_data.attached? %>
     <% end %>
-  </ul>
+  </section>
