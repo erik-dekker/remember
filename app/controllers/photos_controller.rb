@@ -11,8 +11,11 @@ class PhotosController < ApplicationController
     redirect_to album_path(@photo.album_id)
   end
 
+  def new_photo
+    @photo =
+
   private
     def photo_params
-      params.require(:photo).permit(:title, :description, :img_data)
+      params.permit(:title, :description, :photos)
     end
 end

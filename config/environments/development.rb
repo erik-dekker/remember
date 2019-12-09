@@ -62,4 +62,7 @@ Rails.application.configure do
 
   # Set the default URL
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Workaround for deadlocks with active storage
+  config.active_job.queue_adapter = :inline
 end
