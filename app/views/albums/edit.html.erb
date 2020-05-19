@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <h1 class="h3">Add some awesome photos</h1>
-<%= form_with(model: @album, url: album_path(@album), method: 'patch', local:true) do |f| %>
+<%= bootstrap_form_with(model: @album, url: album_path(@album), method: 'patch', local:true) do |f| %>
   <%= f.text_field :description, label: "What's happening?" %>
   <%= f.file_field :photos, multiple: true, label: 'Browse photo' %>
   <%= f.submit %>
