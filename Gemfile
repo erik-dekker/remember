@@ -62,4 +62,4 @@ gem 'devise'
 gem "bootstrap_form", "~> 4.0"
 
 # Image uploads
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
